@@ -66,9 +66,6 @@ chmod 755 %{buildroot}%{ruby_gemdir}/gems/%{oname}-%{version}/validate.sh
 #fix shebang once again...
 ruby -pi -e 'sub(/\/usr\/local\/bin\/ruby/, "/usr/bin/env ruby")' %{buildroot}%{ruby_gemdir}/gems/%{oname}-%{version}/{bin/*,lib/parse_tree.rb,test/*.rb,demo/*}
 
-%clean
-rm -rf %{buildroot}
-
 %files
 %defattr(-, root, root, -)
 %{_bindir}/parse_tree_abc
@@ -81,7 +78,6 @@ rm -rf %{buildroot}
 %{ruby_gemdir}/gems/%{oname}-%{version}/demo/
 %{ruby_gemdir}/gems/%{oname}-%{version}/lib/
 %{ruby_gemdir}/gems/%{oname}-%{version}/test/
-%{ruby_gemdir}/gems/%{oname}-%{version}/.require_paths
 %{ruby_gemdir}/gems/%{oname}-%{version}/validate.sh
 %doc %{ruby_gemdir}/doc/%{oname}-%{version}
 %doc %{ruby_gemdir}/gems/%{oname}-%{version}/History.txt
@@ -90,3 +86,10 @@ rm -rf %{buildroot}
 %doc %{ruby_gemdir}/gems/%{oname}-%{version}/README.txt
 %{ruby_gemdir}/cache/%{oname}-%{version}.gem
 %{ruby_gemdir}/specifications/%{oname}-%{version}.gemspec
+
+
+%changelog
+* Fri Oct 15 2010 Rémy Clouard <shikamaru@mandriva.org> 3.0.6-1mdv2011.0
++ Revision: 585881
+- import rubygem-ParseTree
+

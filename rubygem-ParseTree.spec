@@ -2,7 +2,7 @@
 
 Name:       rubygem-%{oname}
 Version:    3.0.6
-Release:    %mkrel 1
+Release:    2
 Summary:    A C extension that extracts the parse tree for an entire class
 Group:      Development/Ruby
 License:    MIT

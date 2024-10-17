@@ -6,7 +6,7 @@ Release:    2
 Summary:    A C extension that extracts the parse tree for an entire class
 Group:      Development/Ruby
 License:    MIT
-URL:        http://rubyforge.org/projects/parsetree/
+URL:        https://rubyforge.org/projects/parsetree/
 Source0:    http://rubygems.org/gems/%{oname}-%{version}.gem
 BuildRoot:  %{_tmppath}/%{name}-%{version}-%{release}
 Requires:   rubygems
